@@ -14,6 +14,8 @@ public class Room : MonoBehaviour
     [HideInInspector]
     public bool isRoomActive;
 
+    public GameObject mapHider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +71,8 @@ public class Room : MonoBehaviour
             }
 
             isRoomActive = true;
+
+            mapHider.SetActive(false);
         }
     }
 
