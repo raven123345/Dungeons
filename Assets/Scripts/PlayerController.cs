@@ -19,13 +19,12 @@ public class PlayerController : MonoBehaviour
 
     public Animator anim;
 
-    public GameObject bulletToFire;
-    public Transform firePoint;
+    //public GameObject bulletToFire;
+    //public Transform firePoint;
+    //public float timeBetweenShots;
+    //private float shotsCounter;
 
     public GameObject damageEffect;
-
-    public float timeBetweenShots;
-    private float shotsCounter;
 
     public SpriteRenderer body;
 
@@ -82,21 +81,21 @@ public class PlayerController : MonoBehaviour
 
             gunArm.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                shotsCounter = timeBetweenShots;
-            }
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
+            //    shotsCounter = timeBetweenShots;
+            //}
 
-            if (Input.GetMouseButton(0))
-            {
-                shotsCounter -= Time.deltaTime;
-                if (shotsCounter <= 0f)
-                {
-                    Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                    shotsCounter = timeBetweenShots;
-                }
-            }
+            //if (Input.GetMouseButton(0))
+            //{
+            //    shotsCounter -= Time.deltaTime;
+            //    if (shotsCounter <= 0f)
+            //    {
+            //        Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
+            //        shotsCounter = timeBetweenShots;
+            //    }
+            //}
 
 
 
